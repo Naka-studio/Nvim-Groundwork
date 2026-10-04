@@ -17,10 +17,10 @@ vim.diagnostic.config({
   float = { border = "rounded", source = true },
   signs = {
     text = {
-      [vim.diagnostic.severity.ERROR] = "",
-      [vim.diagnostic.severity.WARN] = "",
-      [vim.diagnostic.severity.INFO] = "",
-      [vim.diagnostic.severity.HINT] = "",
+      [vim.diagnostic.severity.ERROR] = vim.fn.nr2char(0xf057),
+      [vim.diagnostic.severity.WARN] = vim.fn.nr2char(0xf071),
+      [vim.diagnostic.severity.INFO] = vim.fn.nr2char(0xf05a),
+      [vim.diagnostic.severity.HINT] = vim.fn.nr2char(0xf0eb),
     },
   },
 })

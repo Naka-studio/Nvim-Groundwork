@@ -80,7 +80,7 @@ Ini adalah konfigurasi Neovim yang ditulis **dari nol** menggunakan [lazy.nvim](
         ├── notify.lua        ├── noice.lua        ├── dashboard.lua
         ├── conform.lua       ├── autopairs.lua    ├── autotag.lua
         ├── highlight-colors.lua  ├── gitsigns.lua ├── which-key.lua
-        └── indent.lua        └── surround.lua
+				└── indent.lua        ├── surround.lua     └── neogit.lua
 ```
 
 ### Daftar Plugin
@@ -104,6 +104,7 @@ Ini adalah konfigurasi Neovim yang ditulis **dari nol** menggunakan [lazy.nvim](
 | `indent-blankline.nvim` | Garis indentasi |
 | `nvim-surround` | Edit pembungkus (kutip, kurung, tag) |
 | `snacks.nvim` | Dashboard (hanya modul dashboard yang aktif) |
+| `neogit` | UI Git ala Magit (status, commit, push) |
 
 ### Keymap Penting
 
@@ -122,6 +123,7 @@ Leader key: **`Space`**
 | `gcc` | Komentar baris (bawaan Neovim) |
 | `ysiw"` / `cs"'` / `ds'` | Tambah / ganti / hapus pembungkus |
 | `↑` `↓` atau `Ctrl+n` `Ctrl+p` | Pilih saran di completion dan cmdline |
+| `<leader>gg` | Buka Neogit (UI Git) |
 
 ---
 
