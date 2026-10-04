@@ -225,7 +225,7 @@ mv ~/.config/nvim ~/.config/nvim.bak
 2. **Clone repo ini:**
 
 ```bash
-git clone https://github.com/Naka-studio/Nvim-Grounwork.git ~/.config/nvim
+git clone https://github.com/Naka-studio/Nvim-Groundwork.git ~/.config/nvim
 ```
 
 3. **Buka Neovim**, lalu tunggu proses instalasi plugin dan compile parser treesitter sampai selesai. Di HP ini bisa memakan waktu 1 sampai 2 menit, jangan ditutup.
@@ -331,7 +331,7 @@ vim.lsp.enable({
 
 ### Bantuan
 
-Menemukan bug atau punya saran? Buka [Issues](https://github.com/Naka-studio/Nvim-Grounwork/issues) di repo ini.
+Menemukan bug atau punya saran? Buka [Issues](https://github.com/Naka-studio/Nvim-Groundwork/issues) di repo ini.
 
 ---
 
