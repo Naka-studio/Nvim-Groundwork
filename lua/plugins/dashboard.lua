@@ -30,6 +30,7 @@ return {
     vim.list_extend(lines, studio)
 
     return {
+      indent = { enabled = true }, -- garis indent + scope (snacks)
       dashboard = {
         enabled = true,
         preset = {
