@@ -36,12 +36,14 @@ return {
         preset = {
           header = table.concat(lines, "\n"),
           keys = {
-            { icon = ic(0xf002), key = "f", desc = "Find file", action = ":Telescope find_files" },
-            { icon = ic(0xf0f6), key = "n", desc = "New file", action = ":ene | startinsert" },
-            { icon = ic(0xf0e7), key = "g", desc = "Grep text", action = ":Telescope live_grep" },
+            { icon = ic(0xf002), key = "f", desc = "Find file",    action = ":Telescope find_files" },
+            { icon = ic(0xf0f6), key = "n", desc = "New file",     action = ":ene | startinsert" },
+            { icon = ic(0xf0e7), key = "g", desc = "Grep text",    action = ":Telescope live_grep" },
             { icon = ic(0xf1da), key = "r", desc = "Recent files", action = ":Telescope oldfiles" },
             {
-              icon = ic(0xf013), key = "c", desc = "Config",
+              icon = ic(0xf013),
+              key = "c",
+              desc = "Config",
               action = ":lua require('telescope.builtin').find_files({ cwd = vim.fn.stdpath('config') })",
             },
             { icon = ic(0xf0ae), key = "l", desc = "Lazy", action = ":Lazy" },
@@ -50,7 +52,7 @@ return {
         },
         sections = {
           { section = "header" },
-          { section = "keys", gap = 0, padding = 1 },
+          { section = "keys",   gap = 1, padding = 1 },
           { section = "startup" }, -- waktu startup (lazy.nvim)
         },
       },
