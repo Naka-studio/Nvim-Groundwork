@@ -25,17 +25,3 @@ vim.diagnostic.config({
   },
 })
 
--- Keymap LSP (cuma aktif di buffer yg punya LSP)
-vim.api.nvim_create_autocmd("LspAttach", {
-  callback = function(ev)
-    local map = function(keys, fn, desc)
-      vim.keymap.set("n", keys, fn, { buffer = ev.buf, desc = desc })
-    end
-    map("gd", vim.lsp.buf.definition, "Go to definition")
-    map("K", vim.lsp.buf.hover, "Hover docs")
-    map("<leader>rn", vim.lsp.buf.rename, "Rename symbol")
-    map("<leader>ca", vim.lsp.buf.code_action, "Code action")
-    map("<leader>e", vim.diagnostic.open_float, "Show diagnostic")
-    -- Inlay hints sengaja GK diaktifin (ganggu)
-  end,
-})

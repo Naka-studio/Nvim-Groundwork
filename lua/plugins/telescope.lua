@@ -8,13 +8,6 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
     },
-    keys = {
-      { "<leader>ff", function() require("telescope.builtin").find_files() end, desc = "Cari file" },
-      { "<leader>fg", function() require("telescope.builtin").live_grep() end,  desc = "Grep isi project" },
-      { "<leader>fb", function() require("telescope.builtin").buffers() end,    desc = "Buffer terbuka" },
-      { "<leader>fr", function() require("telescope.builtin").oldfiles() end,   desc = "File terakhir" },
-      { "<leader>fh", function() require("telescope.builtin").help_tags() end,  desc = "Cari help" },
-    },
     config = function()
       local telescope = require("telescope")
       local actions_layout = require("telescope.actions.layout")

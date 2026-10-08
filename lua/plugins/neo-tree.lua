@@ -7,9 +7,7 @@ return {
     "nvim-tree/nvim-web-devicons",
     "MunifTanjim/nui.nvim",
   },
-  keys = {
-    { "<leader>n", "<cmd>Neotree toggle<cr>", desc = "Toggle file explorer" },
-  },
+  cmd = "Neotree",
   opts = {
     -- Ikon status git (range Font Awesome, aman di Cascadia NF)
     default_component_configs = {

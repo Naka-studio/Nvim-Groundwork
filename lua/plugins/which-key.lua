@@ -1,24 +1,42 @@
--- Popup bantuan keymap
+-- Popup bantuan keymap (grup label sama dengan LazyVim)
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
-  keys = {
-    {
-      "<leader>?",
-      function() require("which-key").show({ global = false }) end,
-      desc = "Keymap buffer ini",
-    },
-  },
   opts = {
     preset = "classic",
     win = { border = "rounded" }, -- popup rounded
     spec = {
-      { "<leader>f", group = "find" },
-      { "<leader>h", group = "git hunk" },
-      { "<leader>c", group = "code" },
-      { "[", group = "prev" },
-      { "]", group = "next" },
-      { "g", group = "goto" },
+      {
+        mode = { "n", "x" },
+        { "<leader><tab>", group = "tabs" },
+        { "<leader>c", group = "code" },
+        { "<leader>d", group = "debug" },
+        { "<leader>dp", group = "profiler" },
+        { "<leader>f", group = "file/find" },
+        { "<leader>g", group = "git" },
+        { "<leader>gh", group = "hunks" },
+        { "<leader>q", group = "quit/session" },
+        { "<leader>s", group = "search" },
+        { "<leader>u", group = "ui" },
+        { "<leader>x", group = "diagnostics/quickfix" },
+        { "[", group = "prev" },
+        { "]", group = "next" },
+        { "g", group = "goto" },
+        { "gs", group = "surround" },
+        { "z", group = "fold" },
+        {
+          "<leader>b",
+          group = "buffer",
+          expand = function() return require("which-key.extras").expand.buf() end,
+        },
+        {
+          "<leader>w",
+          group = "windows",
+          proxy = "<c-w>",
+          expand = function() return require("which-key.extras").expand.win() end,
+        },
+        { "gx", desc = "Open with system app" },
+      },
     },
   },
 }
